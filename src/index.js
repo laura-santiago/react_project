@@ -3,11 +3,23 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Calculator from './components/calculator';
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Heroes from './components/heroes';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Calculator/>
+    <Tabs defaultActiveKey="heroes" id="uncontrolled-tab-example">
+        <Tab eventKey="calculator" title="Calculadora">
+          <Calculator/>
+        </Tab>
+        <Tab eventKey="heroes" title="Héroes">
+          <Heroes/>
+        </Tab>
+    </Tabs>    
+    
   </React.StrictMode>
 );
 

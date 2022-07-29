@@ -128,7 +128,7 @@ export default class Calculator extends Component {
 
   render() {
     return (
-      <div>
+      <div className='container mt-5'>
         <table border="1">
           <thead>
           <tr>
